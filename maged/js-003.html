@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS Objects</title>
+</head>
+
+<body>
+
+    <label for="searchkey">Search for</label>
+    <select id="listBox"></select>
+    <button id="btnSearch">Search</button>
+
+    <p id="resultBox">Result will be here...</p>
+
+    <script>
+
+        const firstName = 'Maged';
+
+        const user = {
+            firstName: 'Hamdy',
+            lastName: 'Ali',
+            age: 33,
+            "blood-type": 'A+',
+            address: {
+                country: 'Egypt',
+                city: 'Cairo',
+                street: 'Ramsis',
+                buildingNo: 34000,
+                area: 'Ramsis'
+            },
+            married: true,
+            hasKids: true,
+            kidsNames: [
+                'Mona',
+                'Tamer'
+            ],
+        };
+
+
+        const keys = Object.keys(user);
+        console.log(keys);
+
+        // function userFunction  () {}
+        // const userFunction = () => {}
+        // keys.forEach(userFunction);
+
+        // keys.forEach(function z() { });
+        // keys.forEach(function () { });
+        keys.forEach(item => listBox.innerHTML += `<option value='${item}'>${item}</option>`);
+
+
+
+        btnSearch.addEventListener('click', () => {
+            const searchKey = listBox.value;
+            console.log(searchKey);
+
+            const result = user[searchKey];
+
+            // Get the full object
+            console.log('user', result);
+
+            if (result) {
+                if (typeof result === 'object')
+                    console.log('I am an object');
+
+                    
+
+                else
+                    resultBox.innerText = result;
+
+            }
+            else resultBox.innerText = 'Nothing match your search!!!!';
+
+        })
+    </script>
+
+</body>
+
+</html>

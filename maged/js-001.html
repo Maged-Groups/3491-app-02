@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS Objects</title>
+</head>
+
+<body>
+
+    <script>
+        const searchKey = 'address';
+        const firstName = 'Maged';
+
+        const user = {
+            firstName: 'Hamdy',
+            lastName: 'Ali',
+            age: 33,
+            "blood-type": 'A+',
+            address: {
+                country: 'Egypt',
+                city: 'Cairo',
+                street: 'Ramsis',
+                buildingNo: 34000,
+                area: 'Ramsis'
+            },
+            married: true,
+            hasKids: true,
+            kidsNames: [
+                'Mona',
+                'Tamer'
+            ],
+        };
+        
+        console.log('user', user);
+        console.log(user.firstName);
+        console.log(user['blood-type']);
+        
+        console.log(user[searchKey]);
+
+    </script>
+
+</body>
+
+</html>
