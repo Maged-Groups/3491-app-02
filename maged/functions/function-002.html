@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function parameter with default value</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        const sum = function (n1, n2) {
+            return n1 + n2;
+        }
+
+        const totalA = sum(5, 4);
+        console.log('totalA', totalA)
+
+        const calcDiscount = function (price, discount = 0) {
+            return price - price * discount / 100;
+        }
+
+        console.log(calcDiscount(1000, 10));
+        console.log(calcDiscount(1500, 3));
+        console.log(calcDiscount(1000));
+        console.log(calcDiscount(2000));
+        console.log(calcDiscount(100));
+        console.log(calcDiscount(500));
+        console.log(calcDiscount(800));
+        console.log(calcDiscount(1800));
+        console.log(calcDiscount(800, 5));
+
+    </script>
+</body>
+
+</html>
