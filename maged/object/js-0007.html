@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Clone</title>
+</head>
+
+<body>
+
+    <script>
+        const maleUser = {
+            title: 'mr.',
+            name: '',
+            age: null,
+            address: {
+                street: null,
+                area: null,
+                city: null,
+                country: 'Egypt'
+            },
+            hireDate: new Date()
+        };
+
+        console.log('maleUser', maleUser);
+
+        const userA = maleUser;
+        const userB = { ...maleUser }
+        const userC = structuredClone(maleUser); // Deep Clone
+
+        console.log('userA', userA);
+
+        userA.name = 'Ali';
+        console.log('userA', userA);
+        console.log('maleUser', maleUser);
+
+        maleUser.age = 80;
+        console.log('userA', userA);
+        console.log('maleUser', maleUser);
+        
+        userB.name = 'Nader';
+        console.log('userA', userA);
+        console.log('userB', userB);
+        console.log('maleUser', maleUser);
+
+        
+        maleUser.age = 60;
+        console.log('userA', userA);
+        console.log('userB', userB);
+        console.log('maleUser', maleUser);
+        
+        userB.address.country = 'Italy'
+        console.log('userA', userA);
+        console.log('userB', userB);
+        console.log('userC', userC);
+        console.log('maleUser', maleUser);
+        
+        userC.address.country = 'Spain';
+        console.log('userA', userA);
+        console.log('userB', userB);
+        console.log('userC', userC);
+        console.log('maleUser', maleUser);
+
+    </script>
+
+</body>
+
+</html>

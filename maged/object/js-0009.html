@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS Objects</title>
+</head>
+
+<body>
+
+    <script>
+
+        const searchKey = 'blood-type';
+
+        const user = {
+            firstName: 'Gamal',
+            lastName: 'Ahmed',
+            age: 33,
+            "blood-type": 'A+',
+        };
+
+        console.log('user',user)
+
+        const userKeys = Object.keys(user);
+        console.log('userKeys',userKeys)
+
+        const userVals = Object.values(user);
+        console.log('userVals',userVals)
+
+        const userEntries = Object.entries(user);
+        console.log('userEntries',userEntries)
+     
+    </script>
+
+</body>
+
+</html>

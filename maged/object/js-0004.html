@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destruct</title>
+</head>
+
+<body>
+
+    <script>
+        const user = {
+            firstName: 'Ramez',
+            lastName: 'Adam',
+            age: 44,
+            title: 'mr.'
+        }
+
+
+        // const lastName = user.lastName;
+        // const firstName = user.firstName;
+        // const age = user.age;
+        // const title = user.title;
+
+        // OR use Object Destruct
+        const { firstName, lastName, title, age } = user;
+
+        console.log(user);
+        console.log(user.lastName);
+        console.log(user.firstName);
+        console.log(user.age);
+        console.log(user.title);
+
+        console.log(lastName);
+        console.log(firstName);
+        console.log(age);
+        console.log(title);
+    </script>
+
+</body>
+
+</html>

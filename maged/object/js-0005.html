@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destruct</title>
+</head>
+
+<body>
+
+    <script>
+        const user = {
+            firstName: 'Ramez',
+            lastName: 'Adam',
+            age: 44,
+            title: 'mr.',
+            address: {
+                street: '21 Dahab street',
+                area: 'Roushdi',
+                city: 'Alexandria',
+                country: 'Egypt',
+                coordinates: {
+                    lat: '31.040555',
+                    long: '015255.558'
+                }
+            }
+        }
+
+        const { firstName, lastName, title, age, address: { city, country, street, area, coordinates: { lat, long } } } = user;
+
+
+        console.log(lat);
+
+        const mobile = {
+            body: {
+                dimensions: '155.5 x 75.3 x 8.8 mm (6.12 x 2.96 x 0.35 in)',
+                Weight: '182 g (6.42 oz)'
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS Objects</title>
+</head>
+
+<body>
+
+    <script>
+
+        const searchKey = 'blood-type';
+
+        const user = {
+            firstName: 'Gamal',
+            lastName: 'Ahmed',
+            age: 33,
+            "blood-type": 'A+',
+        };
+
+        // console.log('user', user);
+        // console.log('user lastName', user.lastName);
+        // console.log('user lastName', user['lastName']);
+        
+        // console.log('user lastName', user['blood-type']);
+        
+        // console.log('user lastName', user['searchKey']);
+        // console.log('user lastName', user[searchKey]);
+
+        for (let k in user) {
+            console.log(k);
+            console.log(user.k);
+            console.log(user[k]);
+        }
+    </script>
+
+</body>
+
+</html>
