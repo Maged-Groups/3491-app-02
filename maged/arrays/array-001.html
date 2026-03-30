@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array's Methods</title>
+</head>
+
+<body>
+
+    <script>
+
+        const users = [
+            "Alaa",
+            "Habiba",
+            "Asmaa",
+            "Hassan"
+        ];
+
+        const mobiles = [
+            'Samsung',
+            'iPhone',
+            'Oppo',
+            'Xiaomi',
+            'Alcatel'
+        ];
+
+        mobiles.forEach(mobile => console.log(mobile))
+ 
+        const females = [
+            "Alaa",
+            "Habiba",
+            "Asmaa",
+        ];
+
+
+        // const titledFemales = [];
+
+        // females.forEach(function (female) { console.log(`Ms. ${female}`) })
+        // females.forEach(function (female) { titledFemales.push(`Ms. ${female}`) })
+        // const titledFemales = females.map(function (female) { return `Ms. ${female}` })
+        // const titledFemales = females.map( (female) => { return `Ms. ${female}` })
+        // const titledFemales = females.map( female => { return `Ms. ${female}` })
+        const titledFemales = females.map(female => `Ms. ${female}`);
+
+        console.log('titledFemales', titledFemales);
+
+
+        const prices = [1000, 2000, 3000, 510, 5841, 484, 484, 280, 87412, 584, 6545];
+
+        const newPrices = prices.map(price => price * 1.1);
+
+        console.log('newPrices', newPrices)
+
+        // Get low prices < 3000
+        const lowPrices = prices.filter(price => price < 3000);
+
+        console.log('lowPrices', lowPrices)
+
+        // Get high prices >= 3000
+
+
+        const acceptedPrice = prices.find(price => price >= 3000);
+        const acceptedPriceIndex = prices.findIndex(price => price >= 3000);
+        const allPass = prices.every(price => price >= 500);
+        const somePass = prices.some(price => price >= 5000);
+
+        console.log('acceptedPrice', acceptedPrice);
+        console.log('acceptedPriceIndex', acceptedPriceIndex);
+        console.log('allPass', allPass);
+        console.log('somePass', somePass);
+
+        // const allFemales = females.join();
+        // const allFemales = females.join('-');
+        const allFemales = females.join('');
+        console.log('allFemales', allFemales);
+
+
+    </script>
+
+</body>
+
+</html>

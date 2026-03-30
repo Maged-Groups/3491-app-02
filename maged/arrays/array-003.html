@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array's Methods</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        const user1 = ['Alaa', 'Hamdy', 'Abdel-rahman'];
+        const user2 = ['Habiba', 'Hamada', 'Mohamed'];
+
+        const fullName = (t1, t2) => `${t1} ${t2}`;
+
+
+        // debugger
+        const user1FullName = user1.reduce(fullName, 'Ms.');
+        const user2FullName = user2.reduce(fullName, 'Ms.');
+
+        console.log('user1FullName', user1FullName);
+        console.log('user2FullName', user2FullName);
+
+        // const sum = (...arr) => {
+        //     console.log('arr', arr);
+        // }
+
+        // sum(1000, 2000, 3000, 510, 5841, 484, 484, 280, 87412, 584, 6545);
+    </script>
+
+</body>
+
+</html>

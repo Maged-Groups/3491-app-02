@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 24px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table,
+        td,
+        th {
+
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Initials</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody id="users_data">
+
+        </tbody>
+    </table>
+    <script>
+        const analyzeName = fullName => {
+            const nameArray = fullName.split(' ');
+            const firstname = nameArray[0];
+            const lastname = nameArray[nameArray.length - 1];
+            const initials = (firstname[0] + lastname[0]).toUpperCase();
+            return [fullName, firstname, lastname, initials];
+        }
+
+        const user1 = analyzeName("maGEd M. yaseen"); // ['Maged', 'Yaseen', 'MY']
+
+        console.log(user1);
+
+        // const fullName = user1[0];
+        // const fName = user1[1];
+        // const lName = user1[2];
+        // const init = user1[3];
+        // OR Destruct the array
+        const [fullName, fName, lName, init] = user1;
+
+        users_data.innerHTML = `
+         <tr>
+            <td>1</td>
+            <td>${init}</td>
+            <td>${fName}</td>
+            <td>${lName}</td>
+            <td>${fullName}</td>
+         </tr>
+        `;
+    </script>
+</body>
+
+</html>

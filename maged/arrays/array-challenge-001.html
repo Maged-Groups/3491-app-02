@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array's Methods</title>
+</head>
+
+<body>
+
+    <script>
+
+        const sum = (...arr) => {
+            console.log('arr', arr);
+        }
+
+        sum(1000, 2000, 3000, 510, 5841, 484, 484, 280, 87412, 584, 6545);
+        sum(510, 5841, 484, 484, 280, 87412, 584, 6545);
+        sum(280, 87412, 584, 6545);
+        sum(584, 6545);
+        sum(3, 280, 6545);
+
+        // Get the sum of each function call => use reduce
+    </script>
+
+</body>
+
+</html>

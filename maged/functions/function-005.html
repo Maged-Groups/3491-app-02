@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with rest operator</title>
+</head>
+
+<body>
+    <script>
+        const sum_a = function (n1, n2) {
+            console.log('n1', n1);
+            console.log('n2', n2);
+        }
+        sum_a(34, 4, 3);
+
+        console.log('-----------------');
+
+        const sum_b = function (n1, n2, ...rst) {
+            console.log('n1', n1);
+            console.log('n2', n2);
+            console.log('rst', rst);
+        }
+        sum_b(34, 4, 3, 9, 39, 60, 45);
+
+        console.log('-----------------');
+
+        const sum_c = function (...rst) {
+            console.log('rst', rst);
+        }
+        sum_c(34, 4, 3, 9, 39, 60, 45);
+        sum_c();
+    </script>
+</body>
+
+</html>

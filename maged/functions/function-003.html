@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        const greetings = () => console.log('Hello');
+
+        greetings();
+
+        const welcomeUser = userrname => console.log(`Welcome ${userrname}`)
+
+        welcomeUser('Alaa');
+        welcomeUser('Habiba');
+        welcomeUser('Asmaa');
+
+        const sum = (n1, n2) => n1 + n2;
+
+        const totalA = sum(5, 4);
+        console.log('totalA', totalA)
+
+        const calcDiscount = (price, discount = 0) => price - price * discount / 100;
+
+
+        console.log(calcDiscount(1000, 10));
+        console.log(calcDiscount(1500, 3));
+        console.log(calcDiscount(1000));
+        console.log(calcDiscount(2000));
+        console.log(calcDiscount(100));
+        console.log(calcDiscount(500));
+        console.log(calcDiscount(800));
+        console.log(calcDiscount(1800));
+        console.log(calcDiscount(800, 5));
+
+        // function firstLetter(text) {
+        //     return text[0];
+        // }
+
+        // const firstLetter = function (text) {
+        //     return text[0];
+        // }
+
+        // const firstLetter = (text) => {
+        //     return text[0];
+        // }
+
+        // const firstLetter = text => {
+        //     return text[0];
+        // }
+
+        // const firstLetter = text => { return text[0]; }
+
+        const firstLetter = text => text[0];
+
+        firstLetter('Maged'); // M
+
+
+        const showUser = user => user;
+
+        const sqr = n => n ** 2;
+
+        const half = n => n / 2;
+
+        const res1 = half(10);
+
+        console.log('res1', res1);
+
+
+    </script>
+</body>
+
+</html>
