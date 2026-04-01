@@ -47,13 +47,36 @@
     </table>
 
     <script>
-
         const users = [
             ['ALAA', 'hamdy', 'abdel-rahman'],
             ['Habiba', 'Hamada', 'MOHAMED'],
             ['ASmaa', 'Abdelazim', 'mohamed'],
             ['MAgeD', 'm.', 'Yaseen']
         ];
+
+
+const capitalizeName = arr => {
+    return arr.map( group =>
+        group.map ( name =>
+            name.charAt(0).toUpperCase()+ name.slice(1).toLowerCase()
+        )
+    );
+}
+
+const users_update = capitalizeName(users);
+console.log(users_update);
+
+         const analyzeName = arr=> {
+            const fullName = arr.join(" ");
+            const firstname = arr[0];
+            const lastname =arr [arr.length - 1];
+            const initials = (firstname[0] + lastname[0]).toUpperCase();
+            return [fullName, firstname, lastname, initials];
+        }
+
+
+        
+
 
 
         // Fill the table with all users
@@ -63,7 +86,66 @@
         3- Create a function that recieves the names and generate an array of name parts
         4- Use array destruct instead of array indexes
         */
-                
+       
+       const user1 = analyzeName(users_update[0])
+        console.log('user1 is :' ,user1);   
+
+        const [fullName, fName, lName, init] = user1;
+
+        users_data.innerHTML = `
+         <tr>
+            <td>1</td>
+            <td>${init}</td>
+            <td>${fName}</td>
+            <td>${lName}</td>
+            <td>${fullName}</td>
+         </tr>
+        `;
+        const user2 = analyzeName(users_update[1])
+        console.log('user1 is :' ,user2);   
+
+        const [full_name, f_Name, l_Name, inits] = user2;
+
+        users_data.innerHTML += `
+         <tr>
+            <td>2</td>
+            <td>${inits}</td>
+            <td>${f_Name}</td>
+            <td>${l_Name}</td>
+            <td>${full_name}</td>
+         </tr>
+        `;
+        const user3 = analyzeName(users_update[2])
+        console.log('user1 is :' ,user3);   
+
+         const [full__Name, f__Name, l__Name, initss] = user3;
+
+        users_data.innerHTML += `
+         <tr>
+            <td>3</td>
+            <td>${initss}</td>
+            <td>${f__Name}</td>
+            <td>${l__Name}</td>
+            <td>${full__Name}</td>
+         </tr>
+        `;
+        const user4 = analyzeName(users_update[3])
+        console.log('user1 is :' ,user4);   
+        
+
+        const [FullName, FName, LName, Init] = user4;
+
+        users_data.innerHTML += `
+         <tr>
+            <td>4</td>
+            <td>${Init}</td>
+            <td>${FName}</td>
+            <td>${LName}</td>
+            <td>${FullName}</td>
+         </tr>
+        `;
+
+
     </script>
 
 </body>
