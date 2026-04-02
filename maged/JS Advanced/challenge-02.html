@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const females = [
+            ['ALAA', 'hamdy', 'abdel-rahman'],
+            ['Habiba', 'Hamada', 'MOHAMED'],
+        ];
+
+        // Create a new array with proper names
+        // ex: [ "Ms. Alaa Hamdy Abdel-rahman", "Ms. Habiba Hamada Mohamed" ]
+
+        const proper = word => word[0].toUpperCase() + word.slice(1).toLowerCase();
+
+
+        const fullName = nameArr => {
+            const properArr = nameArr.map(name => proper(name));
+
+            return properArr.reduce((name1, name2) => `${name1} ${name2}`, 'Ms.');
+        }
+
+        // SHORT SYNTAX
+        // const fullName = nameArr => nameArr.map(name => proper(name)).reduce((name1, name2) => `${name1} ${name2}`, 'Ms.');
+
+        const all_females = females.map(fullName)
+
+
+        console.log(all_females)
+
+    </script>
+</body>
+
+</html>
