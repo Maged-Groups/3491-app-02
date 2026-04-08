@@ -12,16 +12,37 @@
     <script>
 
         const sum = (...arr) => {
-            console.log('arr', arr);
+            return arr;
         }
+        const n1 = sum(1000, 2000, 3000, 510, 5841, 484, 484, 280, 87412, 584, 6545);
+        console.log('n1 =', n1);
+        const sum1 = n1.reduce((a, b) => a + b);
+        console.log('total =' ,sum1);
 
-        sum(1000, 2000, 3000, 510, 5841, 484, 484, 280, 87412, 584, 6545);
-        sum(510, 5841, 484, 484, 280, 87412, 584, 6545);
-        sum(280, 87412, 584, 6545);
-        sum(584, 6545);
-        sum(3, 280, 6545);
+
+        const n2 = sum(510, 5841, 484, 484, 280, 87412, 584, 6545);
+        console.log('n2 =', n2);
+        const sum2 = n2.reduce((a, b) => a + b);
+        console.log('total =' ,sum2);
+
+        const n3 = sum(280, 87412, 584, 6545);
+        console.log('n3 =', n3);
+        const sum3 = n3.reduce((a, b) => a + b);
+        console.log('total =' ,sum3);
+
+        const n4 = sum(584, 6545);
+        console.log('n4 =', n4);
+        const sum4 = n4.reduce((a, b) => a + b);
+        console.log('total =' ,sum4);
+
+        const n5 = sum(3, 280, 6545);
+        console.log('n5 =', n5);
+        const sum5 = n5.reduce((a, b) => a + b);
+        console.log('total =' ,sum5);
+
 
         // Get the sum of each function call => use reduce
+
     </script>
 
 </body>
